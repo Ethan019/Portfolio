@@ -1,3 +1,6 @@
+#Password SSL generator and checker based on given user infromation that is input. Uses database of known passwords and the tests them. (This was the first password checker I wrote for SSL) 
+
+
 from cmd import PROMPT
 from tkinter import N
 import pexpect, time
@@ -62,8 +65,8 @@ def userinfo():
     counter = 0
 
     user = 'ubuntu'
-
-    host = '52.90.73.11'
+   #FILL IN THIS PART FOR IT TO WORK CORRECTLY 
+   # host = ''
 
     file = open("test.pass.txt", 'r')
 
