@@ -1,3 +1,8 @@
+#This is a program that guesses a specific host (server) password. The host address has been removed because it was the schools actual host addresses this was tested on. 
+#It is meant to keep trying the SSL with paramaters to beat lock out time
+#This is for educational purposes only. 
+
+
 from cmd import PROMPT
 
 import pexpect, time
@@ -62,8 +67,8 @@ def userinfo():
     counter = 0
 
     user = 'ubuntu'
-
-    host = '52.90.73.11'
+    #This host needs to be filled in for it to work correctly
+    host = ''
 
     file = open("test.pass.txt", 'r')
 
