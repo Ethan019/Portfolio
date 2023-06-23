@@ -20,7 +20,7 @@ for hashvalue in hashvalues.readlines():
         password = password.strip('\n')
 
 
-
+        #You can remove the salt section or commment it our and crack passwords without it. 
         #print(password)
         #convert each common password to different hash values.
         #you have to reverse password+salt if the salt comes before the hash in the text file
