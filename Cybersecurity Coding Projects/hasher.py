@@ -1,5 +1,7 @@
 import hashlib
-# This module, hashlib, implements a common interface to many different secure hash
+
+#This program creates hashes for the differnet hash values and ouputs their value based on user input. 
+
 # including SHA1, SHA224, SHA256, SHA384, and SHA512, as well as MD5 algorithm
 
 
