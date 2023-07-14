@@ -1,0 +1,34 @@
+CREATE USER 'Student' @'localhost' IDENTIFIED BY 'StudentPassword';
+CREATE USER 'LOGIN' @ 'localhost' IDENTIFIED BY 'Login';
+CREATE USER 'Professor' @'localhost' IDENTIFIED BY 'ProfessorPassword';
+CREATE USER 'Schooladmin' @'localhost' IDENTIFIED BY 'SchoolPassword';
+CREATE USER 'DBADMIN' @'localhost' IDENTIFIED BY 'DatabadminPassword';
+
+GRANT insert ON sys.registeredfor TO 'Student'@'localhost';
+GRANT ALL ON sys.studentcor TO 'Student'@'localhost';
+GRANT SELECT ON sys.registeredfor TO 'Professor'@'localhost';
+GRANT SELECT ON sys.course TO 'Professor'@'localhost';
+
+GRANT SELECT ON sys.users TO 'SystLogin' @ 'localhost';
+GRANT SELECT ON sys.databaseadmin TO 'SystLogin'@'localhost';
+GRANT SELECT ON sys.department TO 'SchoolAdmin'@'localhost';
+GRANT SELECT ON sys.schooladmin TO 'SchoolAdmin'@'localhost';
+GRANT delete ON sys.registeredfor TO 'SchoolAdmin'@'localhost';
+GRANT delete ON sys.course TO 'SchoolAdmin'@'localhost';
+GRANT SELECT ON sys.course TO 'SchoolAdmin'@'localhost';
+GRANT SELECT ON sys.registeredfor TO 'Professor'@'localhost';
+GRANT SELECT ON sys.student TO 'Professor'@'localhost';
+GRANT SELECT ON sys.worksfor TO 'SchoolAdmin'@'localhost';
+
+GRANT SELECT ON sys.studentrecord TO 'SchoolAdmin'@'localhost';
+GRANT select on sys.course TO 'SchoolAdmin'@'localhost';
+GRANT SELECT INSERT DELETE on sys.Professor to user 'SchoolAdmin'@'localhost';
+
+GRANT select, insert, delete on sys.student TO 'SchoolAdmin'@'localhost';
+GRANT  insert on sys.users TO 'SchoolAdmin'@'localhost';
+GRANT  select, insert, delete on sys.registeredfor TO 'Student'@'localhost';
+
+GRANT select, insert, delete on sys.users TO 'SchoolAdmin'@'localhost';
+GRANT UPDATE ON sys.registeredfor TO 'Professor'@'localhost';
+
+GRANT UPDATE ON sys.course TO 'Professor'@'localhost'
